@@ -1,7 +1,7 @@
 export const profile = {
   name: "Bertrand Houtoumtai Boukar",
 
-  photo: "public/bertrand.jpg",
+  photo: "/bertrand.jpg",
 
   github: "https://github.com/CodeBertrand",
 
