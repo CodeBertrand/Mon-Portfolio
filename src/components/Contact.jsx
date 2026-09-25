@@ -1,31 +1,40 @@
-import { profile } from "../data/profile";
+import { currently } from "../data/currently";
 
-export default function Contact() {
+export default function Currently() {
   return (
-    <>
-      <section className="contact" id="contact">
-        <h2>Let's build something.</h2>
-        <p>Open to fellowships, collaborations, and interesting problems.</p>
-        <div className="contact-links">
-          <a
-            className="btn btn-primary"
-            href={profile.github}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            GitHub
-          </a>
-          <a
-            className="btn btn-ghost"
-            href={profile.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            LinkedIn
-          </a>
+    <section
+      className="portfolio-section"
+      id="currently"
+    >
+      <div className="section-heading">
+        <div>
+          <p className="eyebrow">Right now</p>
+
+          <h2>
+            What I'm
+            <br />
+            <em>working on.</em>
+          </h2>
         </div>
-      </section>
-      <footer>Built with React &amp; Vite · Hosted on GitHub Pages</footer>
-    </>
+
+        <p>
+          The ideas, technologies and projects
+          currently taking my attention.
+        </p>
+      </div>
+
+      <div className="currently-grid">
+        {currently.map((item) => (
+          <article
+            className="currently-card"
+            key={item.tag}
+          >
+            <span>{item.tag}</span>
+
+            <p>{item.text}</p>
+          </article>
+        ))}
+      </div>
+    </section>
   );
 }
