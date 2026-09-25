@@ -13,10 +13,7 @@ export default function Hero() {
 
       {/* 3. Portrait détouré PNG (z-index: 3) */}
       <div className="hero-portrait">
-        <img
-          src="public/bertrand.jpg"
-          alt="Bertrand Houtoumtai Boukar"
-        />
+        <img src="/bertrand.jpg" alt="Bertrand" />
       </div>
 
       {/* 4. Stamp / Badge flottant (z-index: 4) */}
